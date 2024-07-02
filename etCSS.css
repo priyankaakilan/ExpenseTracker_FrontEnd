@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #373951;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+.add-expense{
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 20px;
+}
+  
+.transaction-form {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-control input[type="text"],
+.form-control input[type="number"],
+.form-control input[type="date"],
+.form-control input[type="month"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #373951;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.history-title {
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 20px;
+}
+
+.history-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.history-list li {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-info {
+  flex: 1;
+}
+
+.expense-name, .expense-category, .expense-amount, .expense-date {
+  margin-right: 10px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+
+.filter-section {
+  margin-top: 30px;
+}
+
+.filter-form {
+  margin-bottom: 10px;
+}
+
+.report-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .form-control input[type="text"],
+  .form-control input[type="number"],
+  .form-control input[type="date"],
+  .form-control input[type="month"] {
+    font-size: 0.9em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+  }
+
+  .history-title {
+    font-size: 1.3em;
+  }
+
+  .history-list li {
+    padding: 8px;
+  }
+
+  .expense-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    font-size: 0.9em;
+  }
+}

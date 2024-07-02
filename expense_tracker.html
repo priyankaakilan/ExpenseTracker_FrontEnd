@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="etCSS.css">
+</head>
+<body>
+    <h1 class="title">€XPENSE TRACKE₹</h1>
+    
+    <!-- Add new expense form-->
+    <div class="container">
+    <h2 class="add-expense">Add an expense</h2><br>
+    <form id="form" class="transaction-form">
+      <div class="form-control">
+        <label for="text">Expense Name</label>
+        <input type="text" id="text" placeholder="Enter expense name" required>
+      </div>
+      <div class="form-control">
+        <label for="category">Expense Category</label>
+        <input type="text" id="category" placeholder="Enter category" required>
+      </div>
+      <div class="form-control">
+        <label for="amount">Amount</label>
+        <input type="number" step="0.01" id="amount" placeholder="Enter amount" required>
+      </div>
+      <div class="form-control">
+        <label for="date">Expense Date</label>
+        <input type="date" id="date" required>
+      </div>
+      <button type="submit" class="btn">Add Expense</button>
+    </form>
+    </div><br>
+
+    <!-- Recent expenses -->
+    <div class="container">
+    <h2 class="history-title">Recent Expenses</h2>
+    <ul id="expense-list" class="history-list">
+      <!-- Recent expenses will be displayed here-->
+    </ul>
+    </div><br>
+
+    <!-- Filter and report section -->
+    <div class="container">
+    
+      <h2 class="history-title">Filter and Reports</h2><br>
+      <div class="filter-form">
+        <label for="filter-month">Select Month:</label>
+        <input type="month" id="filter-month">
+        <button type="button" class="btn" onclick="filterByMonth()">Filter by Month</button>
+      </div>
+      <div class="filter-form">
+        <label for="filter-category">Select Category:</label>
+        <input type="text" id="filter-category" placeholder="Enter category">
+        <button type="button" class="btn" onclick="filterByCategory()">Filter by Category</button>
+      </div>
+    </div><br>
+    <div class="container">
+      <div id="report-container" class="report-container">
+        <Report></Report>
+        <!-- Report will be displayed here -->
+      </div>
+      </div>
+
+
+  <script src="etJS.js"></script>
+</body>
+</html>
